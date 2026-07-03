@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakeisha Mart | Shop Smart. Live Better.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Ambient Background Glows -->
+    <div class="glow-sphere sphere-1"></div>
+    <div class="glow-sphere sphere-2"></div>
+
+    <!-- Navigation Header -->
+    <header class="main-header">
+        <div class="logo">Lakeisha<span>Mart</span></div>
+        <nav class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#services">Services</a>
+            <a href="#policies">Policies</a>
+        </nav>
+        <div class="nav-actions">
+            <button class="cart-btn" onclick="toggleCart()">🛒 <span id="cart-count">0</span></button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="gradient-text">Shop Smart.<br>Live Better.</h1>
+            <p class="hero-subtitle">Discover premium collections across phones, tech, electronics, home essentials, and skincare. Seamless ordering via WhatsApp with nationwide delivery across Kenya.</p>
+            <div class="hero-buttons">
+                <a href="#shop" class="btn-primary">Explore Store</a>
+                <a href="#services" class="btn-secondary">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplace Main Section -->
+    <main class="container">
+        <!-- Search & Filter Bar -->
+        <div class="search-filter-bar glass-card">
+            <input type="text" id="search-bar" placeholder="Search tech, beauty, or home essentials..." oninput="filterProducts()">
+            <select id="category-filter" onchange="filterProducts()">
+                <option value="all">All Categories</option>
+                <option value="tech">📱 Phones & Tech</option>
+                <option value="electronics">🎧 Electronics</option>
+                <option value="home">🏡 Home & Appliances</option>
+                <option value="beauty">💄 Beauty & Skincare</option>
+            </select>
+        </div>
+
+        <!-- Product Grid Arena -->
+        <h2 class="section-title">Featured Collections</h2>
+        <div id="product-grid" class="product-grid"></div>
+    </main>
+
+    <!-- Premium Services Blueprint -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">Premium Services We Offer</h2>
+            <div class="services-grid" id="services-grid"></div>
+        </div>
+    </section>
+
+    <!-- Modern Animated Slide-Out Shopping Cart -->
+    <div id="shopping-cart" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Order Basket</h3>
+            <button onclick="toggleCart()" class="close-cart">✕</button>
+        </div>
+        <div id="cart-items" class="cart-items-container"></div>
+        <div class="cart-footer">
+            <div class="total-row"><span>Total:</span><span id="cart-total">Ksh 0</span></div>
+            <button class="whatsapp-checkout-btn" onclick="checkoutWhatsApp()">🚀 Complete Order via WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- Sticky Floating Support Center -->
+    <div class="floating-support">
+        <a href="https://wa.me/254700000000" target="_blank" class="whatsapp-sticky">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397 0 11.948 0c3.179.001 6.161 1.24 8.413 3.496 2.253 2.254 3.491 5.232 3.491 8.441 0 6.59-5.333 11.939-11.884 11.939-1.999-.001-3.959-.5-5.709-1.45L0 24zm6.59-3.693c1.656.983 3.27 1.498 4.764 1.499 5.407 0 9.805-4.372 9.808-9.743.001-2.597-1.005-5.042-2.835-6.871C16.49 3.362 14.059 2.36 11.48 2.36c-5.412 0-9.814 4.376-9.817 9.748-.001 2.05.541 4.021 1.568 5.712l-.991 3.616 3.708-.969z"/></svg>
+            <span>Chat Support</span>
+        </a>
+    </div>
+
+    <!-- Trust-Focused Multi-Column Footer -->
+    <footer id="policies" class="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>Lakeisha Mart</h3>
+                <p>"Your Everyday Essentials, Elevated."</p>
+                <p class="hours">Hours: Mon - Sat: 8:00 AM - 8:00 PM</p>
+            </div>
+            <div>
+                <h4>Policies</h4>
+                <a href="#">Shipping Policy</a>
+                <a href="#">Returns & Refunds</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+            </div>
+            <div>
+                <h4>Delivery Scope</h4>
+                <p>📍 Nationwide across Kenya via leading courier networks.</p>
+                <p>⏱️ Estimated 1-3 Business Days.</p>
+            </div>
+            <div>
+                <h4>Connect With Us</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                    <a href="#">TikTok</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Lakeisha Mart. Designed Like a Pro. Built for Speed.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
